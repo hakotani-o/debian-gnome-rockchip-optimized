@@ -247,8 +247,8 @@ losetup -d "${loop}"
 trap '' EXIT
 mkdir -p images
 mv ${img} images
-#echo -e "\nCompressing $(basename "${img}.xz")\n"
-#xz -v -9 -T0 "${img}"
+echo -e "\nCompressing $(basename "${img}.xz")\n"
+xz -v -9 -T0 images/"${img}"
 #rm "${img}"
 #cd ./images && sha256sum "$(basename "${img}.xz")" > "$(basename "${img}.xz.sha256")"
 exit 0
