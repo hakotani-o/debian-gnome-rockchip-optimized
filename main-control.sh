@@ -2,8 +2,8 @@
 
 #suite=plucky
 suite=forky
-Uri="http://ftp.udx.icscoe.jp/Linux/debian/"
-#Uri="http://ftp.jp.debian.org/debian/"
+#Uri="http://ftp.udx.icscoe.jp/Linux/debian/"
+Uri="http://ftp.us.debian.org/debian/"
 
 sudo apt-get install debian-archive-keyring
 
