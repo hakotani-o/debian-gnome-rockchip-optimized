@@ -61,10 +61,10 @@ device-tree-compiler zstd python3 \
 python-is-python3 fdisk bc debhelper python3-pyelftools python3-setuptools \
 python3-pkg-resources swig libfdt-dev libpython3-dev \
 git fakeroot build-essential ncurses-dev \
-libelf-dev libgnutls28-dev gcc-13 g++-13 libdw-dev
+libelf-dev libgnutls28-dev gcc-14 g++-14 libdw-dev
 
-systemd-nspawn -D arm64 --resolv-conf=replace-host -E DEBIAN_FRONTEND=noninteractive --as-pid2 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 13
-systemd-nspawn -D arm64 --resolv-conf=replace-host -E DEBIAN_FRONTEND=noninteractive --as-pid2 update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 13
+systemd-nspawn -D arm64 --resolv-conf=replace-host -E DEBIAN_FRONTEND=noninteractive --as-pid2 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-14 14
+systemd-nspawn -D arm64 --resolv-conf=replace-host -E DEBIAN_FRONTEND=noninteractive --as-pid2 update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-14 14
 
 echo "\n##################      systemd-nspawn  END     #######################\n"
 
