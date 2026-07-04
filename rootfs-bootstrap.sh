@@ -165,7 +165,7 @@ chmod +x $1/usr/local/bin/gui-wizard.sh
 mkdir $1/kkk && cp -r kernel $1/kkk
 
 systemd-nspawn -D $1 --resolv-conf=replace-host --as-pid2 /bin/bash -c "apt-get -y purge \$(dpkg --list | grep -Ei 'linux-image|linux-headers|linux-modules|linux-rockchip' | awk '{ print \$2 }')"
-systemd-nspawn -D $1 --resolv-conf=replace-host --as-pid2 /bin/bash -c "cd kkk && sudo dpkg -i *.deb && sudo dpkg -i kernel/*ondemand*.deb && sudo dpkg -i kernel/*conservative*.deb"
+systemd-nspawn -D $1 --resolv-conf=replace-host --as-pid2 /bin/bash -c "cd kkk && dpkg -i kernel/*conservative*.deb && dpkg -i kernel/*ondemand*.deb"
 #&& dpkg -i kernel/*conservative*.deb && dpkg -i kernel/*ondemand*.deb"
 
 rm -rf $1/kkk
