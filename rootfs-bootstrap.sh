@@ -13,7 +13,7 @@ if [ $kernel -ne 5 ]; then
 	echo "Build kernel first"
 	exit 1
 fi
-
+set -x
 #Bootstrap the system
 rm -rf $1
 mkdir $1
